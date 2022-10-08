@@ -72,3 +72,15 @@ echo $bike->brake();
 
 var_dump($bike);
 $bike->dump();
+
+?>
+<html>
+<h2>Essais avec la classe 'Person'</h2>
+</html>
+<?php
+
+require_once 'Person.php';
+$jerome = new Person('Jérôme', 'Legrand', 43);
+$sophie = new Person('Sophie', 'Dupire', 43);
+$alexis = new Person('Alexis', 'Legrand', 9);
+$elisa = new Person('Elisa', 'Legrand', 12);
