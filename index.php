@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POO - Basics | Part 1: Faire ses premières classes</title>
 </head>
+
 <body>
-<h1>POO - Basics | Part 1: Faire ses premières classes</h1>
-<h2>Essais avec la classe 'Car'</h2>
+    <h1>POO - Basics | Part 1: Faire ses premières classes</h1>
+    <h2>Essais avec la classe 'Car'</h2>
 </body>
+
 </html>
 
 <?php
@@ -30,25 +33,26 @@ echo $maVoiture->forward();
 echo $maVoiture->brake();
 echo $maVoiture->start();
 
-echo '<br> Nombre de roues : '.$maVoiture->getNbWheels().' <br />' . PHP_EOL;
+echo '<br> Nombre de roues : ' . $maVoiture->getNbWheels() . ' <br />' . PHP_EOL;
 
 if ($maVoiture->getCurrentSpeed() === 0) {
     echo '<br> La voiture est à l\'arrêt. <br />' . PHP_EOL;
-    } else {
-        echo '<br> La voiture roule actuellement à une vitesse de '.$maVoiture->getCurrentSpeed().' km/h. <br />' . PHP_EOL;
-    }
+} else {
+    echo '<br> La voiture roule actuellement à une vitesse de ' . $maVoiture->getCurrentSpeed() . ' km/h. <br />' . PHP_EOL;
+}
 
-echo '<br> Couleur de la voiture : '.$maVoiture->getColor().' <br />' . PHP_EOL;
+echo '<br> Couleur de la voiture : ' . $maVoiture->getColor() . ' <br />' . PHP_EOL;
 
-echo '<br> Nombre de sièges : '.$maVoiture->getNbSeats().' <br />' . PHP_EOL;
+echo '<br> Nombre de sièges : ' . $maVoiture->getNbSeats() . ' <br />' . PHP_EOL;
 
-echo '<br> Type d\'énergie : '.$maVoiture->getEnergy().' <br />' . PHP_EOL;
+echo '<br> Type d\'énergie : ' . $maVoiture->getEnergy() . ' <br />' . PHP_EOL;
 
-echo '<br> Jauge de carburant : '.$maVoiture->getEnergyLevel().'L <br />' . PHP_EOL;
+echo '<br> Jauge de carburant : ' . $maVoiture->getEnergyLevel() . 'L <br />' . PHP_EOL;
 
 ?>
 <html>
 <h2>Essais avec la classe 'Bicycle'</h2>
+
 </html>
 <?php
 require_once 'Bicycle.php';
@@ -63,24 +67,12 @@ $bike->dump();
 
 // Moving bike
 echo $bike->forward();
-echo '<br> Vitesse du vélo : '.$bike->getCurrentSpeed().' km/h <br />';
+echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h <br />';
 echo $bike->brake();
-echo '<br> Vitesse du vélo : '.$bike->getCurrentSpeed().' km/h <br />';
+echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h <br />';
 echo $bike->brake();
 
 // 2 ways of dumping object
 
 var_dump($bike);
 $bike->dump();
-
-?>
-<html>
-<h2>Essais avec la classe 'Person'</h2>
-</html>
-<?php
-
-require_once 'Person.php';
-$jerome = new Person('Jérôme', 'Legrand', 43);
-$sophie = new Person('Sophie', 'Dupire', 43);
-$alexis = new Person('Alexis', 'Legrand', 9);
-$elisa = new Person('Elisa', 'Legrand', 12);

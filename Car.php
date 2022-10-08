@@ -9,7 +9,9 @@ class Car
     // private string $energy;
     private int $energyLevel;
 
-    public function __construct(private string $color, private int $nbSeats, private string $energy) {}
+    public function __construct(private string $color, private int $nbSeats, private string $energy)
+    {
+    }
 
     public function setNbWheels(int $nbWheels): void
     {
@@ -29,20 +31,20 @@ class Car
     public function forward(): string
     {
         $this->currentSpeed = 10;
-        return '<br> La voiture avance à la vitesse de '.$this->currentSpeed.' km/h. <br />' . PHP_EOL;
+        return '<br> La voiture avance à la vitesse de ' . $this->currentSpeed . ' km/h. <br />' . PHP_EOL;
     }
 
     public function brake(): string
     {
-       $sentence = "";
-       while ($this->currentSpeed > 0) {
-           $this->currentSpeed--;
-           $sentence .= '<br> La voiture freine, sa vitesse passe à '.$this->currentSpeed.' km/h. <br />' . PHP_EOL;
-       }
-       $sentence .= '<br> La voiture est à l\'arrêt. <br />' . PHP_EOL;
-       return $sentence;
+        $sentence = "";
+        while ($this->currentSpeed > 0) {
+            $this->currentSpeed--;
+            $sentence .= '<br> La voiture freine, sa vitesse passe à ' . $this->currentSpeed . ' km/h. <br />' . PHP_EOL;
+        }
+        $sentence .= '<br> La voiture est à l\'arrêt. <br />' . PHP_EOL;
+        return $sentence;
     }
-    
+
     public function start(): string
     {
         $this->currentSpeed = 1;
@@ -79,4 +81,3 @@ class Car
         return $this->energyLevel;
     }
 }
-
